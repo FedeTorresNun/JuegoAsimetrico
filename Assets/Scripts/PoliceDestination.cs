@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using static UnityEditor.PlayerSettings;
 
-public class AgentDestination : MonoBehaviour
+public class PoliceDestination : MonoBehaviour
 {
     public Transform[] points;
     private int destPoint = 0;
@@ -44,10 +44,9 @@ public class AgentDestination : MonoBehaviour
         // Choose the next destination point when the agent gets
         // close to the current one.
         if (!agent.pathPending && agent.remainingDistance < 0.5f)
+        {
             GotoNextPoint();
-
-
-
+        }
         if (Input.GetMouseButton(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
