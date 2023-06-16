@@ -2,14 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-using static UnityEditor.PlayerSettings;
 
 public class PrisonDestination : MonoBehaviour
 {
     public Transform[] points;
     private int destPoint = 0;
     private NavMeshAgent agent;
-
 
     void Start()
     {
@@ -22,7 +20,6 @@ public class PrisonDestination : MonoBehaviour
 
         GotoNextPoint();
     }
-
 
     void GotoNextPoint()
     {
