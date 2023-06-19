@@ -1,15 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.AI;
-using static UnityEditor.PlayerSettings;
 
-public class PoliceDestination : MonoBehaviour
+public class PoliceDestination : NetworkBehaviour
 {
     public Transform[] points;
     private int destPoint = 0;
     private NavMeshAgent agent;
 
+    public NetworkObject myself;
 
     void Start()
     {
@@ -41,6 +42,35 @@ public class PoliceDestination : MonoBehaviour
 
     void Update()
     {
+        if (!IsOwner) return;
+
+        UpdateServerRPC();
+
+        //// Choose the next destination point when the agent gets
+        //// close to the current one.
+        //if (!agent.pathPending && agent.remainingDistance < 0.5f)
+        //{
+        //    GotoNextPoint();
+        //}
+        //if (Input.GetMouseButton(0))
+        //{
+        //    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        //    RaycastHit hit;
+        //    if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+        //    {
+        //        agent.destination = hit.point;
+        //    }
+        //}
+
+        //if (Input.GetMouseButtonUp(0))
+        //{
+        //    agent.ResetPath();
+        //}
+    }
+
+    [ServerRpc]
+    public void UpdateServerRPC()
+    {
         // Choose the next destination point when the agent gets
         // close to the current one.
         if (!agent.pathPending && agent.remainingDistance < 0.5f)
@@ -61,5 +91,7 @@ public class PoliceDestination : MonoBehaviour
         {
             agent.ResetPath();
         }
+
+
     }
 }
