@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainScene.unity
+    path: Assets/Scenes/SelectPlayer.unity
+    guid: d92bb7ed99564a848b72dc5e77019055
+  - enabled: 1
+    path: Assets/Scenes/PoliceScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/PrisonerScene.unity
+    guid: 2beef06892b9bf6448672bb5149808f0
   m_configObjects: {}
