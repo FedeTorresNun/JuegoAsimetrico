@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 8941686033380785092}
   - component: {fileID: 978474035188979009}
   - component: {fileID: 2674471764164935214}
+  - component: {fileID: -4445770575002417686}
   m_Layer: 0
   m_Name: Police
   m_TagString: Police
@@ -271,10 +272,25 @@ MonoBehaviour:
   _initializeOrder: 0
   _defaultDespawnType: 0
   NetworkObserver: {fileID: 0}
-  <PrefabId>k__BackingField: 0
+  <PrefabId>k__BackingField: 1
   <SpawnableCollectionId>k__BackingField: 0
   _scenePathHash: 83102251
   <SceneId>k__BackingField: 0
   <AssetPathHash>k__BackingField: 2957555019394972406
   _sceneNetworkObjects:
   - {fileID: 2674471764164935214}
+--- !u!114 &-4445770575002417686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7431106568623198006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c71fd7f855ec523429999fc4e14a1928, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _overrideType: 3
+  _updateHostVisibility: 1
+  _observerConditions: []

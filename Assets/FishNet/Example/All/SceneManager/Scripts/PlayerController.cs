@@ -1,6 +1,7 @@
 ﻿using FishNet.Connection;
 using FishNet.Object;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace FishNet.Example.Scened
 {
@@ -15,11 +16,16 @@ namespace FishNet.Example.Scened
         [SerializeField]
         private bool _clientAuth = true;
 
+        public NavMeshAgent agent;
+
         public override void OnStartClient()
         {
             base.OnStartClient();
             if (base.IsOwner)
+            {
+                _camera = Camera.main.gameObject;
                 _camera.SetActive(true);
+            }
         }
 
         private void Update()
@@ -67,9 +73,21 @@ namespace FishNet.Example.Scened
 
             transform.position += transform.TransformDirection(direction);
             transform.Rotate(new Vector3(0f, hor * 100f * Time.deltaTime, 0f));
+
+            if (Input.GetMouseButton(0))
+            {
+                Ray pointRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+                RaycastHit hit;
+                if (Physics.Raycast(pointRay, out hit, Mathf.Infinity))
+                {
+                    agent.destination = hit.point;
+                }
+            }
+
+            if (Input.GetMouseButtonUp(0))
+            {
+                agent.ResetPath();
+            }
         }
-
     }
-
-
 }

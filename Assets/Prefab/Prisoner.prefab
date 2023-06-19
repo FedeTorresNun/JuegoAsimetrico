@@ -12,12 +12,13 @@ GameObject:
   - component: {fileID: 4805414971685066246}
   - component: {fileID: 9176282186048088826}
   - component: {fileID: 7161254125208234029}
-  - component: {fileID: 3749418984715788156}
   - component: {fileID: 1029339205496555774}
   - component: {fileID: 2500982358168089765}
   - component: {fileID: 8941686033380785092}
   - component: {fileID: 978474035188979009}
   - component: {fileID: 2674471764164935214}
+  - component: {fileID: -6995114211987943003}
+  - component: {fileID: -1399102485814031255}
   m_Layer: 0
   m_Name: Prisoner
   m_TagString: Prisoner
@@ -111,19 +112,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3749418984715788156
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7431106568623198006}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 132e47b6b4a2ba949bf72d0a8c023d28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  points: []
 --- !u!195 &1029339205496555774
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -271,10 +259,38 @@ MonoBehaviour:
   _initializeOrder: 0
   _defaultDespawnType: 0
   NetworkObserver: {fileID: 0}
-  <PrefabId>k__BackingField: 0
+  <PrefabId>k__BackingField: 2
   <SpawnableCollectionId>k__BackingField: 0
   _scenePathHash: 83102251
   <SceneId>k__BackingField: 0
   <AssetPathHash>k__BackingField: 3804211435178831814
   _sceneNetworkObjects:
   - {fileID: 2674471764164935214}
+--- !u!114 &-6995114211987943003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7431106568623198006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84e0e5d6d8202d645bafaee59f29c785, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points: []
+--- !u!114 &-1399102485814031255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7431106568623198006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c71fd7f855ec523429999fc4e14a1928, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _overrideType: 3
+  _updateHostVisibility: 1
+  _observerConditions: []
