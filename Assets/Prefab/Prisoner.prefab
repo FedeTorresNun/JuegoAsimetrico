@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3715363445500240019}
   - component: {fileID: 5875788448295668180}
   m_Layer: 0
-  m_Name: prisoner
+  m_Name: Prisoner
   m_TagString: Prisoner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -119,7 +119,7 @@ MonoBehaviour:
   <SpawnableCollectionId>k__BackingField: 0
   _scenePathHash: 0
   <SceneId>k__BackingField: 0
-  <AssetPathHash>k__BackingField: 9650085241412550150
+  <AssetPathHash>k__BackingField: 3804211435178831814
   _sceneNetworkObjects:
   - {fileID: 2744497084408747595}
 --- !u!114 &651398681625673424
