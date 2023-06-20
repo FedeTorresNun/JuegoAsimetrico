@@ -17,7 +17,7 @@ public class GetIP : MonoBehaviour
     void Start()
     {
         ip.text = GetLocalIPv4();
-        tb._clientAddress = GetLocalIPv4();
+        //tb._clientAddress = GetLocalIPv4();
     }
 
     public string GetLocalIPv4()
@@ -26,5 +26,10 @@ public class GetIP : MonoBehaviour
         .AddressList.First(
         f => f.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)
         .ToString();
+    }
+
+    public void SetIP(string _ip)
+    {
+        tb._clientAddress = _ip;
     }
 }
