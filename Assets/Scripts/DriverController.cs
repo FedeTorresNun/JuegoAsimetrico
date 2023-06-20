@@ -14,11 +14,19 @@ public class DriverController : MonoBehaviour
     void Update()
     {
         barra.fillAmount = estadoActual/estadoFinal;
+        if (estadoActual > 100)
+        {
+            estadoActual = 100;
+        }
+        if (estadoActual < 0)
+        {
+            estadoActual = 0;
+        }
     }
 
-    //
     public void OnTriggerStay(Collider other)
     {
+        Debug.Log(other.gameObject.tag);
         if(other.gameObject.CompareTag("Police"))
         {
             estadoActual++;

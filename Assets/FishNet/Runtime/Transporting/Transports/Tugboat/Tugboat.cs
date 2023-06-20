@@ -2,8 +2,11 @@ using FishNet.Managing;
 using FishNet.Managing.Transporting;
 using LiteNetLib.Layers;
 using System;
+using System.Net;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.UI;
+using System.Linq;
 
 namespace FishNet.Transporting.Tugboat
 {
@@ -60,7 +63,7 @@ namespace FishNet.Transporting.Tugboat
         /// </summary>
         [Tooltip("Address to connect.")]
         [SerializeField]
-        private string _clientAddress = "localhost";
+        public string _clientAddress = "localhost";
 
         [Header("Misc")]
         /// <summary>

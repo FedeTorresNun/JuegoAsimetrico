@@ -110,9 +110,9 @@ namespace FishNet.Component.Spawning
 #endif
             Vector3 position;
             Quaternion rotation;
-            SetSpawn(_playerPrefab.transform, out position, out rotation);// realizar un for para spawnear el siguiente elemento 
+            SetSpawn(_playerPrefab.transform, out position, out rotation);
 
-            NetworkObject nob = _networkManager.GetPooledInstantiated(_playerPrefab, _playerPrefab.SpawnableCollectionId, true);//realizar el mismo for de arriba
+            NetworkObject nob = _networkManager.GetPooledInstantiated(_playerPrefab, _playerPrefab.SpawnableCollectionId, true);
             nob.transform.SetPositionAndRotation(position, rotation);
             _networkManager.ServerManager.Spawn(nob, conn);
 
